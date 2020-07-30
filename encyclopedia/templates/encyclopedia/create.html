@@ -1,12 +1,12 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    Edit Page: {{title}}
+    Create Page
 {% endblock %}
 
 {% block body %}
 
-<h1>Edit the Content</h1>
+<h1>Create New Page</h1>
 <form method="POST" action="{% url 'save' title %}" >
     {% csrf_token %}
     <div class="row">
@@ -20,6 +20,5 @@
             <input type="submit">
         </div>
     </div>
-
 </form>
 {% endblock %}
